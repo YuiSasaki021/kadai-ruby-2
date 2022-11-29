@@ -1,17 +1,19 @@
+# メソッドを定義
 def fizzbuzz(num)
-  num_max = 100
-  while num <= num_max do
   if num % 3 == 0&&num % 5 == 0
-  puts "FizzBuzz"
+  "FizzBuzz"
   elsif num % 5 == 0
-   puts "Buzz"
+  "Buzz"
   elsif num % 3 == 0
-   puts "Fizz"
-  else
-   puts num
-  end
-  num += 1
+  "Fizz"
+  else 
+   return num
   end
 end
 
-fizzbuzz(1)
+# メソッドを呼び出し
+num_max = 100
+(1..num_max).each do |num|
+  puts fizzbuzz(num)
+  num+1
+end
